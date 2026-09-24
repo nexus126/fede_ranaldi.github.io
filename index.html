@@ -1,147 +1,617 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Federico Ranaldi</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin:0;
+    background:#fafafa;
+    color:#151515;
+
+    font-family:Inter, sans-serif;
+
+    line-height:1.6;
+
+}
+
+
+.container {
+
+    max-width:1000px;
+    margin:auto;
+    padding:40px 30px;
+
+}
+
+
+/* NAV */
+
+nav {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:80px;
+
+}
+
+
+.logo {
+
+    font-family:"JetBrains Mono";
+    font-size:22px;
+    font-weight:600;
+
+}
+
+
+nav a {
+
+    text-decoration:none;
+    color:#555;
+    margin-left:25px;
+    font-size:14px;
+
+}
+
+
+nav a:hover {
+
+    color:black;
+
+}
+
+
+/* HEADER */
+
+
+.terminal {
+
+    font-family:"JetBrains Mono";
+    color:#777;
+    font-size:14px;
+
+}
+
+
+h1 {
+
+    font-size:58px;
+    letter-spacing:-3px;
+    margin:20px 0 5px;
+
+}
+
+
+.subtitle {
+
+    font-size:22px;
+    color:#555;
+    font-weight:400;
+
+}
+
+
+.intro {
+
+    margin-top:35px;
+    font-size:20px;
+    max-width:750px;
+
+}
+
+
+
+.links {
+
+    margin-top:30px;
+
+}
+
+
+.links a {
+
+    font-family:"JetBrains Mono";
+    color:#111;
+    margin-right:25px;
+    text-decoration:none;
+
+}
+
+
+
+/* SECTIONS */
+
+
+section {
+
+    margin-top:90px;
+
+}
+
+
+.section-title {
+
+    font-family:"JetBrains Mono";
+    font-size:17px;
+
+    border-bottom:1px solid #ddd;
+
+    padding-bottom:12px;
+
+    margin-bottom:35px;
+
+}
+
+
+/* CARDS */
+
+
+.grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+.card {
+
+    background:white;
+
+    border:1px solid #e8e8e8;
+
+    padding:25px;
+
+}
+
+
+.card h3 {
+
+    margin-top:0;
+
+    font-size:20px;
+
+}
+
+
+
+.card p {
+
+    color:#555;
+
+}
+
+
+
+/* PROJECTS */
+
+
+.project {
+
+    border-left:3px solid #111;
+
+    padding-left:25px;
+
+    margin-bottom:30px;
+
+}
+
+
+.project h3 {
+
+    margin-bottom:5px;
+
+}
+
+
+
+
+/* PUBLICATIONS */
+
+
+.pub {
+
+    margin-bottom:25px;
+
+}
+
+
+.pub b {
+
+    font-weight:600;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer {
+
+    margin-top:100px;
+
+    font-family:"JetBrains Mono";
+
+    color:#777;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:800px){
+
+
+h1 {
+
+    font-size:40px;
+
+}
+
+
+.grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+nav {
+
+    flex-direction:column;
+    align-items:flex-start;
+
+}
+
+
+nav div {
+
+    margin-top:20px;
+
+}
+
+
+}
+
+
+</style>
+
+
 </head>
+
+
 
 <body>
 
+
+<div class="container">
+
+
+<nav>
+
+<div class="logo">
+FR_
+</div>
+
+
+<div>
+
+<a href="#research">Research</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#publications">Publications</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</nav>
+
+
+
 <header>
 
-<h1>Federico Ranaldi</h1>
 
-<h3>
-PhD Researcher in Computing Science
-</h3>
+<div class="terminal">
 
-<p>
-Natural Language Processing · Large Language Models · Neuro-Symbolic AI
+> loading researcher_profile...
+
+</div>
+
+
+<h1>
+Federico Ranaldi
+</h1>
+
+
+<p class="subtitle">
+
+PhD Researcher · Natural Language Processing · Large Language Models
+
 </p>
+
+
+<p class="intro">
+
+I investigate how Large Language Models acquire, represent and use
+knowledge, with a focus on interpretability, reasoning and structured
+information.
+
+</p>
+
+
+<div class="links">
+
+<a href="#">GitHub</a>
+
+<a href="#">Google Scholar</a>
+
+<a href="#">LinkedIn</a>
+
+</div>
+
 
 </header>
 
 
-<section>
-
-<h2>About</h2>
-
-<p>
-I am a PhD researcher working at the intersection of
-Natural Language Processing and Neuro-Symbolic Artificial Intelligence.
-</p>
-
-<p>
-My research investigates how Large Language Models acquire,
-represent, and use knowledge, moving beyond memorization towards
-generalization, reasoning, and structured understanding.
-</p>
-
-<p>
-I am interested in building AI systems that combine the flexibility
-of neural models with the reliability, transparency, and compositionality
-of symbolic approaches.
-</p>
-
-</section>
 
 
-<section>
+<section id="research">
 
-<h2>Research</h2>
+
+<div class="section-title">
+01 / Research
+</div>
+
+
+
+<div class="grid">
+
 
 <div class="card">
 
-<h3>Structured Reasoning in LLMs</h3>
+<h3>
+LLM Knowledge
+</h3>
 
 <p>
-Understanding whether language models can learn
-formal procedures, symbolic reasoning, and algorithmic structures.
+
+Understanding what information is encoded inside language models
+and how it influences their behaviour.
+
 </p>
 
 </div>
 
 
+
 <div class="card">
 
-<h3>Neuro-Symbolic AI</h3>
+<h3>
+Reasoning
+</h3>
 
 <p>
-Integrating neural architectures with formal languages,
-logic, knowledge representation and structured reasoning.
+
+Studying how LLMs solve reasoning tasks and how symbolic structures
+can improve their reliability.
+
 </p>
 
 </div>
 
 
+
+
 <div class="card">
 
-<h3>Adaptive and Agentic Systems</h3>
+<h3>
+Trustworthy AI
+</h3>
 
 <p>
-Studying how AI agents can adapt their representations,
-procedures and behaviours through experience.
+
+Exploring interpretability, evaluation and limitations of
+large-scale neural models.
+
 </p>
 
 </div>
 
-</section>
 
+</div>
 
-<section>
-
-<h2>Selected Projects</h2>
-
-<ul>
-
-<li>
-CYK Parsing with Large Language Models
-</li>
-
-<li>
-Structural Priming in Language Models
-</li>
-
-<li>
-Adaptive Reasoning Agents
-</li>
-
-<li>
-Long-term Memory and Agentic AI Systems
-</li>
-
-</ul>
 
 </section>
 
 
-<section>
 
-<h2>Links</h2>
+
+
+<section id="projects">
+
+
+<div class="section-title">
+
+02 / Selected Projects
+
+</div>
+
+
+
+<div class="project">
+
+<h3>
+Thinking in Schemas: Robust Syllogistic Reasoning in LLMs
+</h3>
 
 <p>
-<a href="https://github.com/">GitHub</a>
+
+Neuro-symbolic approaches for improving formal reasoning abilities
+and separating logical validity from world knowledge.
+
 </p>
 
-<p>
-<a href="https://scholar.google.com/">Google Scholar</a>
-</p>
+</div>
+
+
+
+<div class="project">
+
+<h3>
+Data Contamination in Large Language Models
+</h3>
 
 <p>
-<a href="https://www.linkedin.com/">LinkedIn</a>
+
+Investigating how training data affects evaluation and downstream
+behaviour of LLMs.
+
 </p>
+
+</div>
+
+
+
+<div class="project">
+
+<h3>
+Linguistic Knowledge in Transformer Models
+</h3>
+
+<p>
+
+Analysing what linguistic properties emerge inside pretrained
+language models.
+
+</p>
+
+</div>
+
 
 </section>
+
+
+
+
+
+<section id="publications">
+
+
+<div class="section-title">
+
+03 / Publications
+
+</div>
+
+
+
+<div class="pub">
+
+<b>
+Thinking in Schemas: Robust Syllogistic Reasoning in LLMs
+</b>
+
+<br>
+
+ACL 2026
+
+</div>
+
+
+
+<div class="pub">
+
+<b>
+Investigating the Impact of Data Contamination of Large Language Models
+in Text-to-SQL Translation
+</b>
+
+<br>
+
+ACL Findings 2024
+
+</div>
+
+
+
+
+<div class="pub">
+
+<b>
+Exploring Linguistic Properties of Monolingual BERTs
+</b>
+
+<br>
+
+EMNLP Findings 2023
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section id="contact">
+
+
+<div class="section-title">
+
+04 / Contact
+
+</div>
+
+
+<p>
+
+📧 federico.ranaldi@example.com
+
+</p>
+
+
+</section>
+
 
 
 <footer>
 
-<p>
-© 2026 Federico Ranaldi
-</p>
+system.ready()
 
 </footer>
 
 
+</div>
+
+
 </body>
+
 </html>
